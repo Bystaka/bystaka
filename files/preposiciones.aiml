@@ -2,14 +2,25 @@
 <aiml version="2.0">
     
  <category>
-    <pattern>TELL ME ABOUT*</pattern>
-    <template>
-        Here is some information <star/>.
+    <pattern>Hablame de *</pattern>
+    <template> 
+        <think><set name="eso"></set></think>
+        Aquí tiene información sobre<br/>
+        <formal>
+        <star/>
+        </formal>
+        .
         <button>
-            <text>Click here</text>
+            <text>Pulse aquí</text>
             <url>https://es.wikipedia.org/wiki/<star/></url>
         </button>
     </template>
   </category>
-
+<category>
+   <pattern>Cuentame mas sobre las proposiciones</pattern> 
+   <template>
+       <codition name="eso">
+       </codition>
+   </template>
+</category>
 </aiml>
