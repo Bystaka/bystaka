@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
     
+  <category>
+      <pattern> * bystaka * </pattern>
+      <template>Hola, estoy listo para responder tus preguntas</template>
+  </category> 
  <category>
     <pattern>Hablame de *</pattern>
     <template> 
-        <think><set name="eso"></set></think>
+        <think><set name="eso"><star/></set></think>
         Aquí tiene información sobre<br/>
         <formal>
         <star/>
@@ -16,11 +20,5 @@
         </button>
     </template>
   </category>
-<category>
-   <pattern>Cuentame mas sobre las proposiciones</pattern> 
-   <template>
-       <codition name="eso">
-       </codition>
-   </template>
-</category>
+
 </aiml>
